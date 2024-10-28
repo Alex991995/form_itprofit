@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+</head>
+<body>
+
+  <div class="conainer">
+    <form class="form">
+
+      
+      <label for="name">Имя</label>
+      <input type="text" class="form__input form__input-name" id="name" name="name">
+      <span class="form__input-error form__input-name_error"></span>
+
+      <label for="email">Email</label>
+      <input type="email" class="form__input form__input-email" id="email" name="email">
+      <span class="form__input-email_error"></span>
+
+      <label for="phone">Введите телефон</label>
+      <input type="tel" class="form__input form__input-phone" id="phone" name="phone" placeholder="+375(__)___-__-__">
+      <span class="form__input-error form__input-phone_error"></span>
+
+      <label for="message">Cообщение</label>
+      <textarea class="form__input form__textarea" name="message" id="message" name="message"></textarea>
+      <span class="form__input-error form__input-message_error"></span>
+
+      <button class="form__btn" type="submit">Отправить</button>
+    </form>
+  </div>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>

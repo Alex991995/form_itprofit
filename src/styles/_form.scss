@@ -1,0 +1,17 @@
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form__input-error,
+.form__input-email_error {
+  height: 20px;
+  color: red;
+}
+
+.from__error {
+  border: 1px solid red;
+}
