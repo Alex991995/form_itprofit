@@ -1,4 +1,4 @@
-import { arrSpanError, keyFormData, regexPattern } from "./constants.js";
+
 import IMask from 'imask';
 
 
@@ -8,26 +8,16 @@ const phone = document.querySelector('.form__input-phone')
 const spanEmailError =  document.querySelector('.form__input-email_error')
 
 
-const mask = new IMask(phone,{
+export const mask = new IMask(phone,{
   mask: "+{375}(00)000-00-00"
 })
 
-function f(className) {
-  for (const element of arrErrors) {
-    if(element.className === className) {
-      return true
-    }
-    
-  }
-  return false
-
-}
 
 
-export function validateForm(formData) {
+export function validateForm(form) {
   let flag = true
-
-  const nodes = formData.children;
+  
+  const nodes = form.children;
   const spanError = document.createElement('span');
 
   for (const node of nodes) {
@@ -40,11 +30,12 @@ export function validateForm(formData) {
         }
         else {
           node.classList.add('from__error')
-          spanEmailError.textContent = "Введите коректный email"
+          spanEmailError.textContent = "Введите корректный email"
           flag = false
         }
       }
       else if(node.classList.contains('form__input-phone')) {
+
         if(mask.masked.isComplete){
           const  spanError = node.nextElementSibling
           spanError.textContent = ""

@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   gap: 10px;
+	position: relative;
 }
 
 .form__input-error,
@@ -14,4 +15,22 @@
 
 .from__error {
   border: 1px solid red;
+}
+
+.form__input {
+  appearance: none;
+	border: none;
+	outline: none;
+	background: rgba(#1e54e9, .2);
+	border-radius: 1rem;
+	padding: 10px;
+	color: #1e54e9;
+}
+
+.closeDialog {
+	position: absolute;
+	right: 10px;
+	top: -5px;
+	font-size: 2rem;
+	cursor: pointer;
 }
